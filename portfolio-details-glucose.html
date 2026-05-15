@@ -100,21 +100,21 @@
             <div class="col-lg-6" data-aos="fade-right">
               <div class="project-header">
                 <div class="project-meta">
-                  <span class="category">Omics</span>
-                  <span class="year">2025</span>
+                  <span class="category">Nutritional & Clinical</span>
+                  <span class="year">2022</span>
                 </div>
-                <h1 class="project-title">Amplicon sequencing tutorial: wetlands dataset</h1>
-                <p class="project-summary">Tutorial-style project demonstrating key steps and analytical decisions in microbiome data analysis using 16S rRNA sequencing data.</p>
+                <h1 class="project-title">Postprandial glucose response analysis using CGM and dietary data</h1>
+                <p class="project-summary">Project demonstrating integration and analysis of continuous glucose monitoring (CGM) and dietary intake data, including visualization of postprandial glucose responses, iAUC calculation, and statistical comparison of glycemic responses to different meals and food products.</p>
                 <div class="project-tags">
                   <span class="tag">R Studio</span>
-                  <span class="tag">Microbiota</span>
-                  <span class="tag">Tutorial</span>
+                  <span class="tag">Continuous Glucose Measurement</span>
+                  <span class="tag">iAUC</span>
                 </div>
               </div>
             </div>
             <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
               <div class="hero-image">
-                <img src="assets/img/portfolio/Microbiome_analysis_and_visualisation/tutorial_plot.jpg" alt="Microbiome analysis and visualisation" class="img-fluid" loading="lazy">
+                <img src="assets/img/portfolio/CGM/glucose_monitoring_plot.jpg" alt="Glucose sensor scanning graph" class="img-fluid" loading="lazy">
               </div>
             </div>
           </div>
@@ -125,16 +125,21 @@
             <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
               <div class="main-content">
                 <h2>Project overview</h2>
+                    <p>This analysis was conducted as part of the broader <a href="https://clinicaltrials.gov/study/NCT05120661"></a>GLYSIMI study, which investigates the role of the human small intestinal microbiota in shaping postprandial glucose responses (PPGR) to standardized meals. For the purpose of portfolio data from 10 participants are presented.</p>
                     <h5>Aim</h5>
-                      <p>Demonstrate key analytical steps and decision points in microbiome data analysis using 16S rRNA sequencing data.</p>
-                    <h5>Reusable Outputs</h5>
-                        <p>Reproducible R Markdown pipeline for microbiome data analysis, including preprocessing, statistical analysis, and visualisation. Designed for adaptation to new datasets and similar study designs.</p>
+                      <p>to assess</p>
+                    <ul>
+                      <li>the consistency of glycaemic responses within individuals to repeated consumption of the same meal, and</li>
+                      <li>difference in responses to different food products across participants.</li>
+                    </ul>
                       <div class="overview-item highlight">
                     <h5>Key insights</h5>
                     <ul>
-                      <li>Microbiome composition varied significantly across environmental gradients (depth and substrate).</li>
-                      <li>Seasonal variation influenced both diversity and community structure.</li>
-                      <li>Distinct microbial clusters were identified using ordination methods.</li>
+                      <li>Although postprandial glycemic curves over the 2-hour period showed minor visual differences, most derived glycemic parameters (peak glucose, minimum glucose, and iAUC) were not significantly different between breakfast meals; an exception was observed for rice (nasi)-based meals.</li>
+                      <li>Gingerbread with yoghurt elicited a significantly higher glycemic response compared to fruit with yoghurt, as reflected by both iAUC and peak glucose.</li>
+                      <li>Nasi consumption resulted in a significantly higher peak glucose compared to pasta, indicating a stronger acute glycemic excursion despite similar overall exposure.</li>
+                      <li>The glucose drink produced the highest peak glucose concentration; however, bread-based meals showed a higher overall glycemic exposure (iAUC), indicating a more prolonged postprandial response despite lower peak values and faster return toward baseline.</li>
+                      <li>Considerable inter-individual variability in glycemic responses was observed, which may be influenced by factors such as metabolic health, age, genetic background, and gut microbiome composition.</li>
                     </ul>
                 </div>
               </div>
@@ -143,19 +148,19 @@
               <div class="project-specs">
                 <div class="spec-item">
                   <h5>Data</h5>
-                  <p>NG-Tax 2.0 processed 16S rRNA amplicon sequencing data from constructed wetlands experiment</p>
+                  <p>CGM recorded by FreeStyle Libre device, an ecological momentary dietary assesment by Traqq<a href="https://traqq.nl/"></a> application</p>
                 </div>
                 <div class="spec-item">
                   <h5>Methods</h5>
-                  <p>Alpha & beta diversity, ordination (PCoA), compositional analysis, differential abundance</p>
+                  <p>iAUC calculation, assesment of the normality of data distribution, linear mixed effects models with random effect</p>
                 </div>
                 <div class="spec-item">
                   <h5>Output</h5>
                   <p>
-                  <a href="https://docs.m-unlock.nl/docs/tutorials/amplicon_tutorial.html#Downstream_analysis" target="_blank">
+                  <a href="" target="_blank">
                       View full HTML report →
                   </a><br>
-                  <a href="https://gitlab.com/m-unlock/m-unlock.gitlab.io/-/blob/main/docs/tutorials/amplicon_tutorial.Rmd?ref_type=heads" target="_blank">
+                  <a href="https://github.com/Anna-Mal/CGM_data/blob/main/Postprandial_GM.Rmd" target="_blank">
                       View code on GitHub →
                   </a>
                 </div>
@@ -175,8 +180,8 @@
                 <span class="step-number">1</span>
               </div>
               <div class="step-content">
-                <h4>Data preparation</h4>
-                <p>Loading NG-Tax output and creating phyloseq object, inspecting parts of phyloseq object</p>
+                <h4>Data integration</h4>
+                <p>Loading continuous glucose monitoring (CGM) measurements and dietary intake data recorded in the Traqq application, followed by merging both datasets.</p>
               </div>
             </div>
             <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
@@ -184,8 +189,8 @@
                 <span class="step-number">2</span>
               </div>
               <div class="step-content">
-                <h4>Preprocessing steps</h4>
-                <p>Cleaning and fixing taxonomy table, quality control, data normalization and transformation</p>
+                <h4>Preprocessing</h4>
+                <p>Extraction of baseline glucose measurements (last CGM measurement before meal consumption) and construction of 2-hour postprandial glucose response windows.</p>
               </div>
             </div>
             <div class="timeline-item" data-aos="fade-up" data-aos-delay="250">
@@ -193,8 +198,22 @@
                 <span class="step-number">3</span>
               </div>
               <div class="step-content">
+                <h4>Quality control</h4>
+                <p>Assessment of CGM data completeness, including the number of available measurements, timing of the first and last postprandial measurements, and overall coverage of the 2-hour response window.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="step-marker">
+                <span class="step-number">4</span>
+              </div>
+              <div class="step-content">
                 <h4>Downstream analysis</h4>
-                <p>Data exploration and composition visualization, alpha and beta diversity analysis, differential abundance testing (MaAsLin2 and LinDA)</p>
+                <p>Exploratory and statistical analysis of postprandial glycemic responses, including visualization of glucose curves, calculation of iAUC, peak glucose, and minimum glucose concentration, as well as comparison of glycemic responses between:</p>
+                <ul>
+                  <li>repeated consumption occasions</li>
+                  <li>different breakfast and dinner meals</li>
+                  <li>breakfast meals and a glucose drink containing 50 g of glucose</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -211,31 +230,32 @@
                 <div class="tool-category" data-aos="fade-up" data-aos-delay="150">
                   <h5>Data handling</h5>
                   <div class="tool-list">
-                    <span class="tool-item">phyloseq</span>
-                    <span class="tool-item">microbiome</span>
-                    <span class="tool-item">dplyr</span>
-                    <span class="tool-item">stringr</span>
+                    <span class="tool-item">lubridate</span>
+                    <span class="tool-item">hms</span>
+                    <span class="tool-item">fuzzyjoin</span>
+                    <span class="tool-item">tidyverse</span>
+                    <span class="tool-item">DescTools</span>
+                    <span class="tool-item">purrr</span>
                   </div>
                 </div>
                 <div class="tool-category" data-aos="fade-up" data-aos-delay="200">
                   <h5>Statistics</h5>
                   <div class="tool-list">
-                    <span class="tool-item">vegan</span>
-                    <span class="tool-item">Maaslin2</span>
-                    <span class="tool-item">MicrobiomeStat</span>
+                    <span class="tool-item">lme4</span>
+                    <span class="tool-item">lmerTest</span>
                     <span class="tool-item">rstatix</span>
+                    <span class="tool-item">broom.mixed</span>
                   </div>
                 </div>
                 <div class="tool-category" data-aos="fade-up" data-aos-delay="250">
                   <h5>Visualization</h5>
                   <div class="tool-list">
                     <span class="tool-item">ggplot2</span>
-                    <span class="tool-item">microViz</span>
-                    <span class="tool-item">RColorBrewer</span>
+                    <span class="tool-item">ggrepel</span>
+                    <span class="tool-item">ggpubr</span>
                     <span class="tool-item">ggsci</span>
                     <span class="tool-item">patchwork</span>
-                    <span class="tool-item">ComplexHeatmap</span>
-                    <span class="tool-item">ggVennDiagram</span>
+                    <span class="tool-item">pals</span>
                   </div>
                 </div>
               </div>
@@ -272,19 +292,34 @@
             </script>
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="assets/img/portfolio/Microbiome_analysis_and_visualisation/alpha_div_wetlands.jpeg" alt="Microbiome analysis and visualisation" class="img-fluid glightbox" loading="lazy">
+                <img src="assets/img/portfolio/CGM/glycemic_response_yoghurt.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
               </div>
               <div class="swiper-slide">
-                <img src="assets/img/portfolio/Microbiome_analysis_and_visualisation/beta_div.jpeg" alt="Microbiome analysis and visualisation" class="img-fluid glightbox" loading="lazy">
+                <img src="assets/img/portfolio/CGM/glycemic_response_bread.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
               </div>
               <div class="swiper-slide">
-                <img src="assets/img/portfolio/Microbiome_analysis_and_visualisation/exploratory_microbiome_wetlands.jpeg" alt="Microbiome analysis and visualisation" class="img-fluid glightbox" loading="lazy">
+                <img src="assets/img/portfolio/CGM/glycemic_response_dinner.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
               </div>
               <div class="swiper-slide">
-                <img src="assets/img/portfolio/Microbiome_analysis_and_visualisation/heatmap_wetlands.jpeg" alt="Microbiome analysis and visualisation" class="img-fluid glightbox" loading="lazy">
+                <img src="assets/img/portfolio/CGM/iAUC_calculation.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
               </div>
               <div class="swiper-slide">
-                <img src="assets/img/portfolio/Microbiome_analysis_and_visualisation/venn_wetlands.jpeg" alt="Microbiome analysis and visualisation" class="img-fluid glightbox" loading="lazy">
+                <img src="assets/img/portfolio/CGM/qc.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio/CGM/histograms.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio/CGM/qq_plots.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio/CGM/response_comparisons_between_meals.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio/CGM/consumption_comparison_dinner.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio/CGM/meal_comparison_to_OGTT.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
               </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -293,20 +328,20 @@
 
         <div class="project-nav" data-aos="fade-up" data-aos-delay="100">
           <div class="nav-wrapper">
-            <a href="#" class="nav-link prev-project">
+            <a href="portfolio-details-microbiome.html" class="nav-link prev-project">
               <div class="nav-content">
                 <span class="nav-direction">← Previous</span>
-                <span class="nav-title">Dietary patterns</span>
+                <span class="nav-title">Amplicon sequencing tutorial</span>
               </div>
             </a>
             <a href="#" class="nav-link all-projects">
               <i class="bi bi-grid-3x3-gap"></i>
               <span>All Projects</span>
             </a>
-            <a href="portfolio-details-glucose.html" class="nav-link next-project">
+            <a href="#" class="nav-link next-project">
               <div class="nav-content">
                 <span class="nav-direction">Next →</span>
-                <span class="nav-title">Postprandial glucose response</span>
+                <span class="nav-title">Proteomics analysis</span>
               </div>
             </a>
           </div>
