@@ -3748,3 +3748,19 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+
+/*--------------------------------------------------------------
+# Workflow branches
+--------------------------------------------------------------*/
+
+.workflow-branches {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: flex-start;
+}
+
+.workflow-column {
+  flex: 1;
+}

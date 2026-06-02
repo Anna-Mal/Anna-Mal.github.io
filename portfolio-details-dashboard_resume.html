@@ -84,7 +84,7 @@
           <ol>
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#portfolio">Portfolio</a></li>
-            <li class="current">Postprandial glucose response</li>
+            <li class="current">Resume on dashboard</li>
           </ol>
         </nav>
       </div>
@@ -100,21 +100,22 @@
             <div class="col-lg-6" data-aos="fade-right">
               <div class="project-header">
                 <div class="project-meta">
-                  <span class="category">Nutritional & Clinical</span>
-                  <span class="year">2022</span>
+                  <span class="category">Other</span>
+                  <span class="year">2026</span>
                 </div>
-                <h1 class="project-title">Postprandial glucose response analysis using CGM and dietary data</h1>
-                <p class="project-summary">Project demonstrating integration and analysis of continuous glucose monitoring (CGM) and dietary intake data, including visualization of postprandial glucose responses, iAUC calculation, and statistical comparison of glycemic responses to different meals and food products.</p>
+                <h1 class="project-title">Resume on dashboard</h1>
+                <p class="project-summary">RMarkdown-based resume dashboard implemented in both static (flexdashboard) and interactive (Shiny) versions, allowing dynamic filtering of experience and interactive word cloud visualization.</p>
                 <div class="project-tags">
                   <span class="tag">R Studio</span>
-                  <span class="tag">Continuous Glucose Measurement</span>
-                  <span class="tag">iAUC</span>
+                  <span class="tag">(flex)dashboard</span>
+                  <span class="tag">shiny</span>
+                  <span class="tag">resume</span>
                 </div>
               </div>
             </div>
             <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
               <div class="hero-image">
-                <img src="assets/img/portfolio/CGM/glucose_monitoring_plot.jpg" alt="Glucose sensor scanning graph" class="img-fluid" loading="lazy">
+                <img src="assets/img/portfolio/Resume/resume_plot.jpg" alt="Glucose sensor scanning graph" class="img-fluid" loading="lazy">
               </div>
             </div>
           </div>
@@ -125,21 +126,21 @@
             <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
               <div class="main-content">
                 <h2>Project overview</h2>
-                    <p>This analysis was conducted as part of the broader <a href="https://clinicaltrials.gov/study/NCT05120661"></a>GLYSIMI study, which investigates the role of the human small intestinal microbiota in shaping postprandial glucose responses (PPGR) to standardized meals. For the purpose of portfolio data from 10 participants are presented.</p>
+                    <p>This project demonstrates how personal CV data can be repurposed as a structured dataset for interactive analytics and visualization.</p>
+                    <p>It shows interactive resume dashboard built in R using flexdashboard and Shiny, enabling dynamic exploration of professional experience through time-based filtering and text mining of CV content.</p>
                     <h5>Aim</h5>
-                      <p>to assess</p>
+                      <p>To design an interactive R-based CV dashboard that demonstrates</p>
                     <ul>
-                      <li>the consistency of glycaemic responses within individuals to repeated consumption of the same meal, and</li>
-                      <li>difference in responses to different food products across participants.</li>
+                      <li>how structured career data can be dynamically filtered by time and</li>
+                      <li>analysed using text-mining techniques such as word frequency and word cloud generation.</li>
                     </ul>
                       <div class="overview-item highlight">
                     <h5>Key insights</h5>
                     <ul>
-                      <li>Although postprandial glycemic curves over the 2-hour period showed minor visual differences, most derived glycemic parameters (peak glucose, minimum glucose, and iAUC) were not significantly different between breakfast meals; an exception was observed for rice (nasi)-based meals.</li>
-                      <li>Gingerbread with yoghurt elicited a significantly higher glycemic response compared to fruit with yoghurt, as reflected by both iAUC and peak glucose.</li>
-                      <li>Nasi consumption resulted in a significantly higher peak glucose compared to pasta, indicating a stronger acute glycemic excursion despite similar overall exposure.</li>
-                      <li>The glucose drink produced the highest peak glucose concentration; however, bread-based meals showed a higher overall glycemic exposure (iAUC), indicating a more prolonged postprandial response despite lower peak values and faster return toward baseline.</li>
-                      <li>Considerable inter-individual variability in glycemic responses was observed, which may be influenced by factors such as metabolic health, age, genetic background, and gut microbiome composition.</li>
+                      <li>Static and interactive dashboards can effectively replace traditional CV formats for exploratory data presentation.</li>
+                      <li>Temporal filtering enables structured interpretation of career progression.</li>
+                      <li>Text mining (word frequency analysis and word clouds) can be used to summarise thematic focus of professional experience.</li>
+                      <li>Shiny applications allow interactive exploration and user-driven data summarisation</li>
                     </ul>
                 </div>
               </div>
@@ -148,19 +149,22 @@
               <div class="project-specs">
                 <div class="spec-item">
                   <h5>Data</h5>
-                  <p>CGM recorded by FreeStyle Libre device, an ecological momentary dietary assesment by Traqq<a href="https://traqq.nl/"></a> application</p>
+                  <p>Structured data frames summarizing education, professional experience, training, projects, and skills.</p>
                 </div>
                 <div class="spec-item">
                   <h5>Methods</h5>
-                  <p>iAUC calculation, assesment of the normality of data distribution, linear mixed effects models with random effect</p>
+                  <p>Interactive timeline visualization and text mining–based word cloud generation implemented in R (flexdashboard + Shiny).</p>
                 </div>
                 <div class="spec-item">
                   <h5>Output</h5>
                   <p>
-                  <a href="" target="_blank">
-                      View full HTML report →
+                  <a href="https://anna-mal.github.io/Resume/Resume_Timeline.html#timelines-wordclouds" target="_blank">
+                      View static dashboard →
                   </a><br>
-                  <a href="https://github.com/Anna-Mal/CGM_data/blob/main/Postprandial_GM.Rmd" target="_blank">
+                  <a href="https://g6q0jb-anna-malinowska.shinyapps.io/Resume_Timeline_shiny/" target="_blank">
+                      View interactive dashboard →
+                  </a><br>
+                  <a href="https://github.com/Anna-Mal/Resume" target="_blank">
                       View code on GitHub →
                   </a>
                 </div>
@@ -180,8 +184,8 @@
                 <span class="step-number">1</span>
               </div>
               <div class="step-content">
-                <h4>Data integration</h4>
-                <p>Loading continuous glucose monitoring (CGM) measurements and dietary intake data recorded in the Traqq application, followed by merging both datasets.</p>
+                <h4>Data preparation</h4>
+                <p>Structured datasets were created to capture education, professional experience, training activities, projects, and technical skills. Each record included relevant data such as start and end dates, organization, role, and additional descriptive information.</p>
               </div>
             </div>
             <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
@@ -189,8 +193,8 @@
                 <span class="step-number">2</span>
               </div>
               <div class="step-content">
-                <h4>Preprocessing</h4>
-                <p>Extraction of baseline glucose measurements (last CGM measurement before meal consumption) and construction of 2-hour postprandial glucose response windows.</p>
+                <h4>Dashboard design</h4>
+                <p>The overall dashboard structure and user experience were planned, including the organization of content into timelines, summary tables, and visualizations.</p>
               </div>
             </div>
             <div class="timeline-item" data-aos="fade-up" data-aos-delay="250">
@@ -198,8 +202,8 @@
                 <span class="step-number">3</span>
               </div>
               <div class="step-content">
-                <h4>Quality control</h4>
-                <p>Assessment of CGM data completeness, including the number of available measurements, timing of the first and last postprandial measurements, and overall coverage of the 2-hour response window.</p>
+                <h4>Interactive timeline development</h4>
+                <p>Timelines were generated in R to visualize career progression. Static visualizations were enhanced with Plotly to enable interactive exploration.</p>
               </div>
             </div>
             <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
@@ -207,15 +211,48 @@
                 <span class="step-number">4</span>
               </div>
               <div class="step-content">
-                <h4>Downstream analysis</h4>
-                <p>Exploratory and statistical analysis of postprandial glycemic responses, including visualization of glucose curves, calculation of iAUC, peak glucose, and minimum glucose concentration, as well as comparison of glycemic responses between:</p>
-                <ul>
-                  <li>repeated consumption occasions</li>
-                  <li>different breakfast and dinner meals</li>
-                  <li>breakfast meals and a glucose drink containing 50 g of glucose</li>
-                </ul>
+                <h4>Text mining and word cloud generation</h4>
+                <p>Textual information from the datasets was processed to calculate word frequencies, which were subsequently visualized as word clouds to highlight dominant themes and competencies.</p>
               </div>
             </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="350">
+              <div class="step-marker">
+                <span class="step-number">5</span>
+              </div>
+              <div class="step-content">
+                <h4>Tabular data presentation</h4>
+                <p>The underlying datasets were converted into interactive DataTables and organized into tabbed sections, allowing detailed exploration of education, experience, training, projects, and skills.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="step-marker">
+                <span class="step-number">6</span>
+              </div>
+              <div class="step-content">
+                <h4>Shiny application development</h4>
+                <p>The dashboard was extended into a Shiny application by introducing a sidebar with user-controlled filters. Users can dynamically select the time period of interest and define the minimum word frequency displayed in the word cloud.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="450">
+              <div class="step-marker">
+                <span class="step-number">7</span>
+              </div>
+              <div class="step-content">
+                <h4>Reactive programming and visualization</h4>
+                <p>Custom filtering functions were implemented to update datasets based on user input. Reactive outputs were created using renderPlotly() and renderDataTable() to ensure that visualizations and tables respond automatically to filtering selections.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
+              <div class="step-marker">
+                <span class="step-number">8</span>
+              </div>
+              <div class="step-content">
+                <h4>Deployment</h4>
+                <p>The completed application was deployed to ShinyApps.io, making the interactive dashboard accessible through a web browser without requiring a local R environment.</p>
+              </div>
+            </div>
+
+
           </div>
         </div>
 
@@ -223,39 +260,36 @@
           <div class="row align-items-center">
             <div class="col-lg-5">
               <h2>Tools &amp; Packages</h2>
-              <p>Import, data integration and downstream statistical analysis, visualisation, and reporting workflow were implemented in R Markdown.</p>
+              <p>Data preparation, interactive visualization, text mining, dashboard development, and deployment workflow were implemented in R using Flexdashboard, Shiny, Plotly, and DT.</p>
             </div>
             <div class="col-lg-6 offset-lg-1">
               <div class="tools-grid">
                 <div class="tool-category" data-aos="fade-up" data-aos-delay="150">
-                  <h5>Data handling</h5>
+                  <h5>Data preparation & text minin</h5>
                   <div class="tool-list">
-                    <span class="tool-item">lubridate</span>
-                    <span class="tool-item">hms</span>
-                    <span class="tool-item">fuzzyjoin</span>
                     <span class="tool-item">tidyverse</span>
-                    <span class="tool-item">DescTools</span>
-                    <span class="tool-item">purrr</span>
+                    <span class="tool-item">lubridate</span>
+                    <span class="tool-item">tidytext</span>
                   </div>
                 </div>
                 <div class="tool-category" data-aos="fade-up" data-aos-delay="200">
-                  <h5>Statistics</h5>
+                  <h5>Visualisation</h5>
                   <div class="tool-list">
-                    <span class="tool-item">lme4</span>
-                    <span class="tool-item">lmerTest</span>
-                    <span class="tool-item">rstatix</span>
-                    <span class="tool-item">broom.mixed</span>
+                    <span class="tool-item">ggplot2</span>
+                    <span class="tool-item">wordcloud</span>
+                    <span class="tool-item">ggsci</span>
+                    <span class="tool-item">ggrepel</span>
                   </div>
                 </div>
                 <div class="tool-category" data-aos="fade-up" data-aos-delay="250">
-                  <h5>Visualization</h5>
+                  <h5>Dashboard & deployment</h5>
                   <div class="tool-list">
-                    <span class="tool-item">ggplot2</span>
-                    <span class="tool-item">ggrepel</span>
-                    <span class="tool-item">ggpubr</span>
-                    <span class="tool-item">ggsci</span>
-                    <span class="tool-item">patchwork</span>
-                    <span class="tool-item">pals</span>
+                    <span class="tool-item">flexdashboard</span>
+                    <span class="tool-item">shiny</span>
+                    <span class="tool-item">plotly</span>
+                    <span class="tool-item">DT</span>
+                    <span class="tool-item">htmltools</span>
+                    <span class="tool-item">rsconnect</span>
                   </div>
                 </div>
               </div>
@@ -292,34 +326,19 @@
             </script>
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="assets/img/portfolio/CGM/glycemic_response_yoghurt.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
+                <img src="assets/img/portfolio/Resume/resume_timeline.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
               </div>
               <div class="swiper-slide">
-                <img src="assets/img/portfolio/CGM/glycemic_response_bread.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
+                <img src="assets/img/portfolio/Resume/resume_wordcloud.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
               </div>
               <div class="swiper-slide">
-                <img src="assets/img/portfolio/CGM/glycemic_response_dinner.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
+                <img src="assets/img/portfolio/Resume/projects_timeline.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
               </div>
               <div class="swiper-slide">
-                <img src="assets/img/portfolio/CGM/iAUC_calculation.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
+                <img src="assets/img/portfolio/Resume/projects_wordcloud.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
               </div>
               <div class="swiper-slide">
-                <img src="assets/img/portfolio/CGM/qc.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/img/portfolio/CGM/histograms.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/img/portfolio/CGM/qq_plots.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/img/portfolio/CGM/response_comparisons_between_meals.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/img/portfolio/CGM/consumption_comparison_dinner.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/img/portfolio/CGM/meal_comparison_to_OGTT.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
+                <img src="assets/img/portfolio/Resume/skills_timeline.jpg" alt="CGM analysis and visualisation" class="img-fluid glightbox" loading="lazy">
               </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -328,20 +347,20 @@
 
         <div class="project-nav" data-aos="fade-up" data-aos-delay="100">
           <div class="nav-wrapper">
-            <a href="portfolio-details-microbiome.html" class="nav-link prev-project">
+            <a href="portfolio-details-proteomics.html" class="nav-link prev-project">
               <div class="nav-content">
                 <span class="nav-direction">← Previous</span>
-                <span class="nav-title">Amplicon sequencing tutorial</span>
+                <span class="nav-title">Proteomics analysis</span>
               </div>
             </a>
             <a href="index.html#portfolio" class="nav-link all-projects">
               <i class="bi bi-grid-3x3-gap"></i>
               <span>All Projects</span>
             </a>
-            <a href="#" class="nav-link next-project">
+            <a href="portfolio-details-microbiome.html" class="nav-link next-project">
               <div class="nav-content">
                 <span class="nav-direction">Next →</span>
-                <span class="nav-title">Proteomics analysis</span>
+                <span class="nav-title">Amplicon sequencing tutorial</span>
               </div>
             </a>
           </div>
