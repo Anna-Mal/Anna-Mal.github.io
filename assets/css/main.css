@@ -3764,3 +3764,19 @@ section,
 .workflow-column {
   flex: 1;
 }
+
+/*--------------------------------------------------------------
+# Under construction badge
+--------------------------------------------------------------*/
+
+.portfolio-image {
+  position: relative;
+}
+
+.construction-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 200px;
+  z-index: 10;
+}
