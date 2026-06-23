@@ -1432,7 +1432,9 @@ section,
 }
 
 .skills .skills-sidebar {
-  padding-left: 40px;
+   padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .skills .skills-sidebar .expertise-highlight {
