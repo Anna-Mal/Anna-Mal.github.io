@@ -124,12 +124,12 @@
                   <span class="category">Omics</span>
                   <span class="year">2022</span>
                 </div>
-                <h1 class="project-title">Proteomics analysis</h1>
+                <h1 class="project-title">Comparing infant gut microbiome function through metaproteomics</h1>
                 <p class="project-summary">Project demonstrating analysis of proteomics datasets, including construction of a custom protein reference database based on microbiome composition data, downstream protein analysis, and biological interpretation of the results.</p>
                 <div class="project-tags">
                   <span class="tag">Bash scripting</span>
                   <span class="tag">Linux</span>
-                  <span class="tag">R Studio</span>
+                  <span class="tag">R / R Markdown</span>
                 </div>
               </div>
             </div>
@@ -146,13 +146,13 @@
             <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
               <div class="main-content">
                 <h2>Project overview</h2>
-                    <p></p>
+                    <p>This project examines protein-level functional profiles of infant gut microbiomes with different microbial compositions. It combines sequencing-informed reference database construction with analysis of metaproteomic data.</p>
                     <h5>Aim</h5>
-                      <p>Create a custom reference protein database derived from microbiome sequencing data and use it to analyze differences in protein composition and functional profiles between groups of interest.</p>
+                      <p>Compare protein composition and functional profiles between groups using custom reference protein databases informed by microbiome sequencing data.</p>
                       <div class="overview-item highlight">
                     <h5>Key insights</h5>
                     <ul>
-                      <li>For functional gut microbiome analysis, shotgun metagenomic sequencing provides the most suitable basis for custom protein database construction due to its species-level taxonomic resolution. </li>
+                      <li>For functional gut microbiome analysis, shotgun metagenomic data provided a basis for constructing a study-specific protein reference database, complemented by reference proteomes from detected microbial taxa.</li>
                       <li>Although custom protein databases can also be generated from 16S rRNA sequencing data, this approach requires multiple analytical decisions i.a. regarding taxonomic assignment of ASVs/OTUs and selection of representative species-level matches.</li>
                       <li>Construction of a study-specific protein database is important because using overly broad reference databases may increase false positive protein identifications.</li>
                       <li>In gut microbiome proteomics, the reference protein database should ideally be based on complementary analyses, such as sequencing data from the same samples, because microbial composition and predicted proteomes vary substantially across individuals, age groups, intestinal tract regions, and other biological or environmental conditions.</li>
@@ -233,7 +233,7 @@
                   <li>Addition of human-derived and contaminant proteins</li>
                   <li>Merging of custom protein databases</li>
                   <li>Functional annotation using eggNOG-mapper</li>
-                  <li>Removal of proteins lacking functional annotation</li>
+                  <li>Removal of proteins with no functional annotation assigned by eggNOG-mapper</li>
                 </ul>
               </div>
             </div>
@@ -248,7 +248,7 @@
                   <li>Annotation harmonization and contaminant filtering</li>
                   <li>Low-prevalence protein filtering</li>
                   <li>Separation of microbial and human-derived proteins</li>
-                  <li>Evaluation of normalization strategies for optimal sample separation</li>
+                  <li>Comparison of normalisation strategies and assessment of their effects on protein abundance distributions and sample clustering</li>
                 </ul>
               </div>
             </div>
@@ -299,7 +299,7 @@
                     <span class="tool-item"><a href="https://github.com/gatech-genemark/MetaGeneMark-2" target="_blank" rel="noopener noreferrer">MetaGeneMark</a></span>
                     <span class="tool-item"><a href="https://github.com/metagentools/ConDiGA" target="_blank" rel="noopener noreferrer">Contigs Directed Gene Annotation (ConDiGA)</a></span>
                     <span class="tool-item"><a href="https://www.bioinformatics.org/cd-hit/" target="_blank" rel="noopener noreferrer">CD-HIT</a></span>
-                    <span class="tool-item"><a href="https://github.com/eggnogdb/eggnog-mapper" target="_blank" rel="noopener noreferrer">eggnog-mapper</a></span>
+                    <span class="tool-item"><a href="https://github.com/eggnogdb/eggnog-mapper" target="_blank" rel="noopener noreferrer">eggNOG-mapper</a></span>
                   </div>
                 </div>
                 <div class="tool-category" data-aos="fade-up" data-aos-delay="200">
@@ -384,7 +384,7 @@
             <a href="portfolio-details-dashboard_resume.html" class="nav-link next-project">
               <div class="nav-content">
                 <span class="nav-direction">Next →</span>
-                <span class="nav-title">Resume on dashboard</span>
+                <span class="nav-title">Interactive CV dashboard</span>
               </div>
             </a>
           </div>
